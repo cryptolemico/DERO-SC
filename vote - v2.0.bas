@@ -127,7 +127,7 @@ End Function
 
 
 Function RenamePoll(name String) Uint64
-	10	IF EXISTS(name + "name") == 1 THEN GOTO 20
+	10	IF EXISTS(name + "_name") == 1 THEN GOTO 20
 	11	PRINTF "This poll doesn't exist!"
 	12	RETURN 1
 
@@ -145,7 +145,7 @@ End Function
 
 
 Function ShowResults(name String) Uint64
-	10	IF EXISTS(name + "name") == 1 THEN GOTO 20
+	10	IF EXISTS(name + "_name") == 1 THEN GOTO 20
 	11	PRINTF "This poll doesn't exist!"
 	12	RETURN 1
 
@@ -162,7 +162,7 @@ End Function
 
 
 Function AddVoter(name String, voter String) Uint64 
-	10	IF EXISTS(name + "name") == 1 THEN GOTO 20
+	10	IF EXISTS(name + "_name") == 1 THEN GOTO 20
 	11	PRINTF "This poll doesn't exist!"
 	12	RETURN 1
 
